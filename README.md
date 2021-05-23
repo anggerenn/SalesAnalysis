@@ -28,8 +28,6 @@ The objective of this project is to create a sales dashboard poc
 │  │  └─ README.md                  <- Import data via command line and create backup
 │  └─ img
 │     └─ sales_dashboard.png
-├─ .env.example
-├─ .gitignore
 ├─ README.md
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
 └─ sales_dashboard.twb              <- Data visualization
