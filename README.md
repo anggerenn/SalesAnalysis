@@ -29,6 +29,7 @@ The objective of this project is to create a sales dashboard poc
 │  └─ img
 │     └─ sales_dashboard.png
 ├─ README.md
+├─ requirements.txt
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
 └─ sales_dashboard.twb              <- Data visualization
 ```
