@@ -6,7 +6,6 @@ The objective of this project is to create a sales dashboard poc
 
 ```
 .
-├─ .gitignore
 ├─ data                             <- Raw data destination
 │  ├─ 2020_Sales.csv                <- Cleaned data after analysis
 │  ├─ Sales_April_2020.csv
@@ -29,6 +28,8 @@ The objective of this project is to create a sales dashboard poc
 │  │  └─ README.md                  <- Import data via command line and create backup
 │  └─ img
 │     └─ sales_dashboard.png
+├─ .env.example
+├─ .gitignore
 ├─ README.md
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
 └─ sales_dashboard.twb              <- Data visualization
