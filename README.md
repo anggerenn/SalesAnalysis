@@ -1,7 +1,13 @@
+# Mock Data to Dashboard
+
+The objective of this project is to create a sales dashboard poc
+
+### Folder Structure
+
 ```
 .
 ├─ .gitignore
-├─ data
+├─ data                             <- Raw data
 │  ├─ 2020_Sales.csv                <- Cleaned data after analysis
 │  ├─ Sales_April_2020.csv
 │  ├─ Sales_August_2020.csv
@@ -24,3 +30,15 @@
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
 └─ sales_dashboard.twb              <- Tableau visualization
 ```
+
+### The Dashboard
+
+![dashboard_img](./src/img/sales_dashboard.png)
+
+This dashboard designed to answer these questions:
+
+- What was the best month for sales? How much was earned that month?
+- Which city had the highest sales?
+- On which day and when is the best time to advertise?
+- Which products are most often sold together?
+- Which product sold the most?
