@@ -6,7 +6,7 @@ import urllib.parse as up
 
 load_dotenv()
 
-filepath = '../data/2020_Sales.csv'
+filepath = './data/2020_Sales.csv'
 
 schema = os.environ['MYSQL_SCHEMA']
 user = os.environ['MYSQL_USER']
@@ -19,4 +19,4 @@ engine = create_engine(url)
 
 with engine.begin() as connection:
     for df in pd.read_csv(filepath, chunksize=1000):
-        df.to_sql('mock_data', con=connection, index=False, if_exists='append')
+        df.to_sql('pelir', con=connection, index=False, if_exists='append')
