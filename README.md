@@ -21,18 +21,17 @@ The objective of this project is to create a sales dashboard poc
 │  ├─ Sales_November_2020.csv
 │  ├─ Sales_October_2020.csv
 │  └─ Sales_September_2020.csv
+├─ src
+│  ├─ data
+│  │  ├─ create_sales_data.py       <- Generate sales data
+│  │  ├─ csv_to_db.py               <- Import data to server scripts
+│  │  ├─ mysql_dump.sql             <- Import data using backup data
+│  │  └─ README.md                  <- Import data via command line and create backup
+│  └─ img
+│     └─ sales_dashboard.png
 ├─ README.md
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
-├─ sales_dashboard.twb              <- Data visualization
-└─ src
-   ├─ data
-   │  ├─ create_sales_data.py       <- Generate sales data
-   │  ├─ csv_to_db.py               <- Import data to server scripts
-   │  ├─ mysql_dump.sql             <- Import data using backup data
-   │  └─ README.md                  <- Import data via command line and create backup
-   └─ img
-      └─ sales_dashboard.png
-
+└─ sales_dashboard.twb              <- Data visualization
 ```
 
 ### The Dashboard [👀](https://public.tableau.com/views/Book1_16216000778710/SalesDashboard)
