@@ -3,6 +3,8 @@ import numpy
 import datetime
 import random
 import calendar
+import os
+from pathlib import Path
 
 products = {
     # Product [Prices, weights]
@@ -30,7 +32,6 @@ products = {
 
 columns = ['User ID', 'Product', 'Quantity',
            'Price Each', 'Order Date', 'Purchase Address']
-
 
 def generate_random_time(month):
     # Generate a date in the format mm/dd/year H:m
@@ -155,7 +156,9 @@ if __name__ == '__main__':
             orders_amount -= 1
 
         month_name = calendar.month_name[month_value]
+        fn = f"./data/Sales_{month_name}_2020.csv"
+        pathname = os.path.join(Path(__file__).resolve().parents[2],fn)
 
-        df.to_csv(f"Sales_{month_name}_2020.csv", index=False)
+        df.to_csv(pathname, index=False)
 
         print(f"{month_name} Complete")
