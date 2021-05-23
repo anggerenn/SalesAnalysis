@@ -7,7 +7,7 @@ The objective of this project is to create a sales dashboard poc
 ```
 .
 ├─ .gitignore
-├─ data                             <- Raw data
+├─ data                             <- Raw data destination
 │  ├─ 2020_Sales.csv                <- Cleaned data after analysis
 │  ├─ Sales_April_2020.csv
 │  ├─ Sales_August_2020.csv
@@ -21,14 +21,18 @@ The objective of this project is to create a sales dashboard poc
 │  ├─ Sales_November_2020.csv
 │  ├─ Sales_October_2020.csv
 │  └─ Sales_September_2020.csv
-├─ misc
-│  ├─ create_sales_data.py          <- Generate sales data
-│  ├─ csv_to_db.py                  <- Import data from python scripts
-│  ├─ mysql_dump.sql                <- Import data using backup data
-│  └─ README.md                     <- Import data via command line and create backup
-├─ requirements.txt
+├─ README.md
 ├─ sales_analysis.ipynb             <- Data analysis and initial visualization
-└─ sales_dashboard.twb              <- Tableau visualization
+├─ sales_dashboard.twb              <- Data visualization
+└─ src
+   ├─ data
+   │  ├─ create_sales_data.py       <- Generate sales data
+   │  ├─ csv_to_db.py               <- Import data to server scripts
+   │  ├─ mysql_dump.sql             <- Import data using backup data
+   │  └─ README.md                  <- Import data via command line and create backup
+   └─ img
+      └─ sales_dashboard.png
+
 ```
 
 ### The Dashboard
