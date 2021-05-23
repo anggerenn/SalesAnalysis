@@ -35,7 +35,7 @@ The objective of this project is to create a sales dashboard poc
 
 ```
 
-### The Dashboard
+### The Dashboard [👀](https://public.tableau.com/views/Book1_16216000778710/SalesDashboard)
 
 ![dashboard_img](./src/img/sales_dashboard.png)
 
