@@ -40,7 +40,7 @@
 
 * Import data to the server
   ```
-  LOAD DATA LOCAL INFILE %PATH%/filename
+  LOAD DATA LOCAL INFILE path/filename
   INTO TABLE tablename
   FIELDS TERMINATED BY ','
   ENCLOSED BY '"'
@@ -63,5 +63,5 @@
 ## Use this script to generate sql dump file
 
 ```
-mysqldump -uMYSQL_USER -pMYSQL_PASSWORD database tablename > %PATH%/filename
+mysqldump -uMYSQL_USER -pMYSQL_PASSWORD database tablename > path/filename
 ```

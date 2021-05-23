@@ -6,7 +6,7 @@ The objective of this project is to create a sales dashboard poc
 
 ```
 .
-├─ data                             <- Raw data destination
+├─ data
 │  ├─ 2020_Sales.csv                <- Cleaned data after analysis
 │  ├─ Sales_April_2020.csv
 │  ├─ Sales_August_2020.csv
@@ -23,8 +23,8 @@ The objective of this project is to create a sales dashboard poc
 ├─ src
 │  ├─ data
 │  │  ├─ create_sales_data.py       <- Generate sales data
-│  │  ├─ csv_to_db.py               <- Import data to server scripts
-│  │  ├─ mysql_dump.sql             <- Import data using backup data
+│  │  ├─ csv_to_db.py               <- Import data to server
+│  │  ├─ mysql_dump.sql             <- Import data using dump file
 │  │  └─ README.md                  <- Import data via command line and create backup
 │  └─ img
 │     └─ sales_dashboard.png
