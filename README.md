@@ -21,5 +21,6 @@
 │  ├─ mysql_dump.sql                <- Import data using backup data
 │  └─ README.md                     <- Import data via command line and create backup
 ├─ requirements.txt
-└─ sales_analysis.ipynb             <- Data analysis and initial visualization
+├─ sales_analysis.ipynb             <- Data analysis and initial visualization
+└─ sales_dashboard.twb              <- Tableau visualization
 ```
