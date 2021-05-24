@@ -22,9 +22,10 @@ The objective of this project is to create a sales dashboard poc
 │  └─ Sales_September_2020.csv
 ├─ src
 │  ├─ data
-│  │  ├─ create_sales_data.py       <- Generate sales data
+│  │  ├─ create_sales_data.py       <- Generates sales data
 │  │  ├─ csv_to_db.py               <- Import data to server
 │  │  ├─ mysql_dump.sql             <- Import data using dump file
+│  │  ├─ pgsql_dump.sql             
 │  │  └─ README.md                  <- Import data via command line and create backup
 │  └─ img
 │     └─ sales_dashboard.png
