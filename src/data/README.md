@@ -1,17 +1,17 @@
-## Use this script to locally import the csv file to MySQL from the command line
+## Use this script to locally import the csv file to MySQL/PostgreSQL from the command line
+
+#### MySQL
 
 - Monitor MySQL Server from the command line
 
   ```
-  mysql -uMYSQL_USER -pMYSQL_PASSWORD database
-
-  # mysql -uroot -p123password db0
+  mysql -u [MYSQL_USER] -p[MYSQL_PASSWORD] [MYSQL_DB]
   ```
 
-* Create table if not exists
+- Create table if not exists
 
   ```
-  CREATE TABLE IF NOT EXISTS tablename (
+  CREATE TABLE IF NOT EXISTS [tablename] (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL DEFAULT '0',
   `product` varchar(255) NOT NULL DEFAULT '',
@@ -38,30 +38,81 @@
   );
   ```
 
-* Import data to the server
+- Import data to the server
   ```
-  LOAD DATA LOCAL INFILE path/filename
+  LOAD DATA LOCAL INFILE [path/filename]
   INTO TABLE tablename
   FIELDS TERMINATED BY ','
   ENCLOSED BY '"'
   LINES TERMINATED BY '\r'
   IGNORE 1 LINES;
   ```
-* Troubleshoot
+- Troubleshoot
 
   - ERROR 3948 (42000): Loading local data is disabled; this must be enabled on both the client and server sides
 
-    - Check the local_infile value
-      ```
-      SHOW GLOBAL VARIABLES LIKE 'local_infile';
-      ```
-    - Change its value to True
-      ```
-      SET GLOBAL local_infile=1;
-      ```
+    ```
+    # Check the local_infile value
+    SHOW GLOBAL VARIABLES LIKE 'local_infile';
+
+    # Change its value to True
+    SET GLOBAL local_infile=1;
+    ```
+
+#### PostgreSQL
+
+- Monitor PostgreSQL Server
+
+  ```
+  psql -U [PGSQL_USER] -d [PGQSQL_DB]
+
+  # input your password when it prompt
+  ```
+
+- Create table
+
+  ```
+  CREATE TABLE public.mock_data (
+    "ID" bigint,
+    "User ID" bigint,
+    "Product" text,
+    "Quantity" bigint,
+    "Price Each" double precision,
+    "Order Date" text,
+    "Purchase Address" text,
+    "Sales" double precision,
+    "Month" bigint,
+    "Month Name" text,
+    "Street" text,
+    "City-State" text,
+    "City" text,
+    "States" text,
+    "Zipcode" bigint,
+    dow bigint,
+    "Day" text,
+    "Hour" bigint,
+    "Paired" text,
+    "Combination" text,
+    "Frequency" double precision,
+    "Product Num" double precision
+  );
+  ```
+
+- Import data to the server
+  ```
+  COPY [tablename] FROM [path/filename] DELIMITER ',' CSV HEADER;
+  ```
 
 ## Use this script to generate sql dump file
 
+#### MySQL
+
 ```
-mysqldump -uMYSQL_USER -pMYSQL_PASSWORD database tablename > path/filename
+mysqldump -u [MYSQL_USER] -p[MYSQL_PASSWORD] [MYSQL_DB] [tablename] > [path/filename]
+```
+
+#### PostgreSQL
+
+```
+pg_dump -U [PGSQL_USER] -d [PGSQL_DB] -t [tablename] > [path/filename]
 ```
