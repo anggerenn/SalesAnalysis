@@ -49,15 +49,15 @@
   ```
 - Troubleshoot
 
-  - ERROR 3948 (42000): Loading local data is disabled; this must be enabled on both the client and server sides
+  ERROR 3948 (42000): Loading local data is disabled; this must be enabled on both the client and server sides
 
-    ```
-    # Check the local_infile value
-    SHOW GLOBAL VARIABLES LIKE 'local_infile';
+  ```
+  # Check the local_infile value
+  SHOW GLOBAL VARIABLES LIKE 'local_infile';
 
-    # Change its value to True
-    SET GLOBAL local_infile=1;
-    ```
+  # Change its value to True
+  SET GLOBAL local_infile=1;
+  ```
 
 #### PostgreSQL
 
@@ -72,7 +72,7 @@
 - Create table
 
   ```
-  CREATE TABLE public.mock_data (
+  CREATE TABLE [tablename] (
     "ID" bigint,
     "User ID" bigint,
     "Product" text,
